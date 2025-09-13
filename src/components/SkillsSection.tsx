@@ -1,53 +1,57 @@
 import { useState } from "react";
 import { cn } from "../lib/utils";
+import { useTranslation } from "react-i18next";
 
 const skills = [
   // Frontend
   { name: "HTML/CSS", level: "80", category: "Frontend" },
-  { name: "TypeScript", level: "50", category: "Frontend" },
+  { name: "TypeScript", level: "70", category: "Frontend" },
   { name: "JavaScript", level: "90", category: "Frontend" },
-  { name: "React", level: "50", category: "Frontend" },
-  { name: "Next.js", level: "0", category: "Frontend" },
+  { name: "React", level: "70", category: "Frontend" },
+  { name: "Next.js", level: "50", category: "Frontend" },
   { name: "Tailwind CSS", level: "50", category: "Frontend" },
-
-  // Backend
-  { name: "Node.js", level: "20", category: "Backend" },
-  { name: "Express.js", level: "0", category: "Backend" },
-  { name: "MongoDB", level: "0", category: "Database" },
-  { name: "PostgreSQL", level: "0", category: "Database" },
-
   // Tools
-  { name: "Figma", level: "0", category: "Tools" },
-  { name: "Git/Github", level: "40", category: "Tools" },
-  { name: "Docker", level: "0", category: "Tools" },
+  { name: "Figma", level: "50", category: "Tools" },
+  { name: "Git/Github", level: "80", category: "Tools" },
+  { name: "Docker", level: "10", category: "Tools" },
   { name: "VsCode", level: "70", category: "Tools" },
+  { name: "Zustand", level: "50", category: "Tools" },
+  { name: "i18next", level: "80", category: "Tools" },
 ];
 
-const categories = ["all", "Frontend", "Backend", "Tools"];
-
 export const SkillsSection = () => {
+  const { t } = useTranslation();
+  const categories = [
+    { key: "all", label: t("skills.all") },
+    { key: "Frontend", label: t("skills.frontend") },
+    { key: "Tools", label: t("skills.tools") },
+  ];
+
   const [activeCategory, setActiveCategory] = useState("all");
-    const filteredSkills = skills.filter(skill => activeCategory === "all" || skill.category === activeCategory);
+  const filteredSkills = skills.filter(
+    (skill) => activeCategory === "all" || skill.category === activeCategory
+  );
+
   return (
     <section id="skills" className="py-24 px-4 relative bg-secondary/30">
       <div className="container mx-auto max-w-5xl">
         <h2 className="text-3xl md:text-4xl font-bold text-center mb-12">
-          My <span className="text-primary">Skills</span>
+          {t("skills.title")}
         </h2>
 
         <div className="flex flex-wrap justify-center gap-4 mb-12">
           {categories.map((category, key) => (
             <button
               key={key}
-              onClick={() => setActiveCategory(category)}
+              onClick={() => setActiveCategory(category.key)}
               className={cn(
                 "px-5 py-2 rounded-full transition-colors duration-300 capitalize",
-                activeCategory === category
+                activeCategory === category.key
                   ? "bg-primary text-primary-foreground"
                   : "bg-secondary/70 text-foreground hover:bg-secondary"
               )}
             >
-              {category}
+              {category.label}
             </button>
           ))}
         </div>

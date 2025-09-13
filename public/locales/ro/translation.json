@@ -1,0 +1,78 @@
+{
+  "navigation": {
+    "portofolio":"meu",
+    "my": "Portofoliul",
+    "home": "Acasă",
+    "about": "Despre mine",
+    "skills": "Competențe",
+    "projects": "Proiecte",
+    "contact": "Contact"
+  },
+  "hero": {
+    "greeting": "Bună, sunt",
+    "description": "Sunt un dezvoltator front-end la început de drum. Îmi place să construiesc interfețe simple și curate, învățând în același timp noi instrumente și tehnici. Fiecare proiect este o oportunitate pentru mine de a mă dezvolta, a mă perfecționa și de a face un pas înainte în călătoria mea ca dezvoltator.",
+    "view_work": "Vezi-mi Proiectele",
+    "scroll": "Derulează"
+  },
+  "about": {
+    "about": "Despre",
+    "me": "mine",
+    "subtitle": "Dezvoltator Front-End Începător",
+    "paragraph_1": "Bună, sunt Sergiu, un dezvoltator front-end la începutul călătoriei mele. Sunt pasionat de a transforma ideile în experiențe web simple, curate și funcționale. În prezent, mă concentrez pe învățarea fundamentelor dezvoltării web moderne, experimentând cu design și cod pentru a construi proiecte din lumea reală.",
+    "paragraph_2": "Ca student la ULIM, îmi place să combin ceea ce învăț la cursuri cu practica. Sunt mereu în căutare de oportunități pentru a mă perfecționa, a explora noi instrumente și a prelua proiecte care mă provoacă să cresc atât ca dezvoltator, cât și ca designer.",
+    "get_in_touch_button": "Contactează-mă",
+    "download_cv": "Descarcă CV",
+    "sections": {
+      "web_dev": {
+        "title": "Dezvoltare Web",
+        "description": "Învăț să construiesc site-uri web responsive, accesibile și moderne folosind tehnologii precum HTML, CSS, TypeScript și React."
+      },
+      "ui_ux": {
+        "title": "Design UI/UX",
+        "description": "Îmi place să proiectez interfețe curate, prietenoase cu utilizatorul și să mă concentrez pe detaliile care creează o experiență de utilizare plăcută și fluidă."
+      },
+      "project_growth": {
+        "title": "Dezvoltare prin Proiecte",
+        "description": "Fiecare proiect la care lucrez mă ajută să-mi dezvolt noi competențe, să înțeleg bunele practici și să devin mai încrezător ca dezvoltator gata să preia provocări mai mari."
+      }
+    }
+  },
+  "skills": {
+    "title": "Competențele mele",
+    "all": "toate",
+    "frontend": "Frontend",
+    "tools": "Instrumente"
+  },
+  "projects": {
+    "title": "Proiecte Realizate",
+    "placeholder_text": "Iată câteva dintre proiectele pe care le-am creat.",
+    "burger_craft": {
+      "title": "Burger Craft",
+      "description": "O aplicație web pentru a crea și a comanda burgeri personalizați, folosind React și Tailwind."
+    },
+    "weather_app": {
+      "title": "Aplicație Meteo",
+      "description": "O aplicație pentru prognoza meteo, folosind React, Tailwind și API-ul OpenWeatherMap."
+    },
+    "check_github": "Vezi Github-ul meu"
+  },
+  "contact": {
+    "title": "Contactează-mă",
+    "description": "Sunt disponibil pentru colaborări și proiecte noi, unde pot să învăț, să mă dezvolt profesional și să ajut la crearea unor experiențe digitale de calitate.",
+    "contact_info": {
+      "title": "Informații de Contact",
+      "email": "Email",
+      "phone": "Telefon",
+      "location": "Locație",
+      "location_value": "Republica Moldova (deschis la lucru remote)"
+    },
+    "connect": "Rețele de socializare",
+    "send_message": {
+      "title": "Trimite-mi un Mesaj",
+      "name": "Numele tău",
+      "email": "Email-ul tău",
+      "message": "Mesajul tău",
+      "button": "Trimite Mesaj"
+    }
+  }
+}

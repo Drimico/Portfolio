@@ -1,0 +1,82 @@
+{
+  "navigation": {
+    "my": "My",
+    "portofolio": "Portfolio",
+    "home": "Home",
+    "about": "About",
+    "skills": "Skills",
+    "projects": "Projects",
+    "contact": "Contact"
+  },
+  "hero": {
+    "greeting": "Hi, I'm",
+    "description": "I’m a beginner front-end developer. I enjoy building simple, clean interfaces while learning new tools and techniques along the way. Every project is an opportunity for me to grow, improve, and take another step forward in my journey as a developer.",
+    "view_work": "View My Work",
+    "scroll": "Scroll"
+  },
+  "about": {
+    "about": "About",
+    "me": "Me",
+    "subtitle": "Beginner Front-End Developer",
+    "paragraph_1": "Hi, I’m Sergiu, a front-end developer at the start of my journey. I’m passionate about turning ideas into simple, clean, and functional web experiences. Right now, I’m focused on learning the fundamentals of modern web development while experimenting with design and code to build real-world projects.",
+    "paragraph_2": "As a student at ULIM, I enjoy combining what I learn in class with hands-on practice. I’m always looking for opportunities to improve, explore new tools, and take on projects that challenge me to grow both as a developer and as a designer.",
+    "get_in_touch_button": "Get In Touch",
+    "download_cv": "Download CV",
+    "sections": {
+      "web_dev": {
+        "title": "Web Development",
+        "description": "I’m learning to build responsive, accessible, and modern websites using technologies like HTML, CSS, TypeScript, and React."
+      },
+      "ui_ux": {
+        "title": "UI/UX Design",
+        "description": "I enjoy designing clean, user-friendly interfaces and focusing on the details that make a smooth and enjoyable user experience."
+      },
+      "project_growth": {
+        "title": "Project Growth",
+        "description": "Every project I work on helps me develop new skills, understand best practices, and become more confident as a developer ready to take on bigger challenges."
+      }
+    }
+  },
+  "skills": {
+    "title": "My Skills",
+    "all": "all",
+    "frontend": "Frontend",
+    "tools": "Tools"
+  },
+  "projects": {
+    "title": "Featured Projects",
+    "placeholder_text": "Here are some of the projects I’ve created.",
+    "burger_craft": {
+      "title": "Burger Craft",
+      "description": "A web application for building and ordering custom burgers using React and Tailwind."
+    },
+    "weather_app": {
+      "title": "Weather app",
+      "description": "A weather forecasting app using React, Tailwind, and OpenWeatherMap API."
+    },
+    "check_github": "Check My Github"
+  },
+  "contact": {
+    "title": "Get In Touch",
+    "description": "I’m ready to take on new opportunities and contribute to projects. I’d be happy to connect and collaborate on anything where I can learn and grow.",
+    "contact_info": {
+      "title": "Contact Information",
+      "email": "Email",
+      "phone": "Phone",
+      "location": "Location",
+      "location_value": "Republic of Moldova (open to remote work)"
+    },
+    "connect": "Connect With Me",
+    "send_message": {
+      "title": "Send a Message",
+      "name": "Your Name",
+      "email": "Your Email",
+      "message": "Your Message",
+      "button": "Send Message"
+    },
+    "toast": {
+      "success": "Message sent successfully!",
+      "error": "Failed to send message. Please try again."
+    }
+  }
+}

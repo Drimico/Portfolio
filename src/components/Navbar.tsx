@@ -1,21 +1,23 @@
 import { useEffect, useState } from "react";
 import { cn } from "../lib/utils";
 import { Menu, X } from "lucide-react";
-
-const navItems = [
-  { name: "Home", href: "#hero" },
-  { name: "About", href: "#about" },
-  { name: "Skills", href: "#skills" },
-  { name: "Projects", href: "#projects" },
-  { name: "Contact", href: "#contact" },
-];
+import { useTranslation } from "react-i18next";
+import i18n from "../utils/i18n";
 
 export const Navbar = () => {
+  const { t } = useTranslation();
   const [isScrolled, setIsScrolled] = useState(false);
   const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const navItems = [
+    { name: t("navigation.home"), href: "#hero" },
+    { name: t("navigation.about"), href: "#about" },
+    { name: t("navigation.skills"), href: "#skills" },
+    { name: t("navigation.projects"), href: "#projects" },
+    { name: t("navigation.contact"), href: "#contact" },
+  ];
   useEffect(() => {
     const handleScroll = () => {
-      setIsScrolled(window.screenY > 10);
+      setIsScrolled(window.scrollY > 10);
     };
 
     window.addEventListener("scroll", handleScroll);
@@ -36,8 +38,16 @@ export const Navbar = () => {
           className="text-xl font-bold text-primary flex items-center"
         >
           <span className="relative z-10 ">
-            <span className="text-glow text-foreground">Drimico</span>{" "}
-            Portofolio
+            <span
+              className={`text-glow ${i18n.language === "en" ? "text-foreground" : ""}`}
+            >
+              {t("navigation.my")}{" "}
+            </span>
+            <span
+              className={`text-glow ${i18n.language === "ro" ? "text-foreground" : ""}`}
+            >
+              {t("navigation.portofolio")}
+            </span>
           </span>
         </a>
 
@@ -59,7 +69,7 @@ export const Navbar = () => {
 
         <button
           onClick={() => setIsMenuOpen((prev) => !prev)}
-          className="md:hidden p-2 text-foreground z-50"
+          className="md:hidden p-2 text-foreground z-50 mr-18"
           aria-label={isMenuOpen ? "Close menu" : "Open menu"}
         >
           {isMenuOpen ? <X size={24} /> : <Menu size={24} />}
