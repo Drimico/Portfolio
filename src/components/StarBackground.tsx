@@ -18,24 +18,9 @@ interface MeteorProps {
 export const StarBackground = () => {
   const [stars, setStars] = useState<StarProps[]>([]);
   const [meteors, setMeteors] = useState<MeteorProps[]>([]);
-  useEffect(() => {
-    generateStars();
-    generateMeteors();
-
-    const handleResize = () => {
-      generateStars();
-    };
-    window.addEventListener("resize", handleResize);
-
-    return () => {
-      window.removeEventListener("resize", handleResize);
-    }
-  }, []);
 
   const generateStars = () => {
-    const numberOfStars = Math.floor(
-      (window.innerWidth * window.innerHeight) / 8000
-    );
+    const numberOfStars = Math.floor((window.innerWidth * window.innerHeight) / 8000);
     const newStars = [];
     for (let i = 0; i < numberOfStars; i++) {
       newStars.push({
@@ -56,7 +41,7 @@ export const StarBackground = () => {
       newMeteors.push({
         id: i,
         size: Math.random() * 2 + 1,
-        x: Math.random() * 80,
+        x: Math.random() * 70,
         y: Math.random() * 20,
         delay: Math.random() * 0,
         animationDuration: Math.random() * 3 + 3,
@@ -64,6 +49,19 @@ export const StarBackground = () => {
     }
     setMeteors(newMeteors);
   };
+  useEffect(() => {
+    generateStars();
+    generateMeteors();
+
+    const handleResize = () => {
+      generateStars();
+    };
+    window.addEventListener("resize", handleResize);
+
+    return () => {
+      window.removeEventListener("resize", handleResize);
+    };
+  }, []);
 
   return (
     <div className="fixed inset-0 overflow-hidden pointer-events-none z-0">
@@ -87,7 +85,7 @@ export const StarBackground = () => {
           className="meteor animate-meteor"
           style={{
             width: meteor.size * 50 + "px",
-            height: meteor.size  + "px",
+            height: meteor.size + "px",
             left: meteor.x + "%",
             top: meteor.y + "%",
             animationDelay: `${meteor.delay}s`,
