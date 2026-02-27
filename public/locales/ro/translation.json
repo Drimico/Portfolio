@@ -48,11 +48,15 @@
     "placeholder_text": "Iată câteva dintre proiectele pe care le-am creat.",
     "burger_craft": {
       "title": "Burger Craft",
-      "description": "O aplicație web pentru a crea și a comanda burgeri personalizați, folosind React și Tailwind."
+      "description": "O aplicație web pentru a crea și a comanda burgeri personalizați. Folosind Zustand pentru gestionarea stării."
     },
     "weather_app": {
       "title": "Aplicație Meteo",
-      "description": "O aplicație pentru prognoza meteo, folosind React, Tailwind și API-ul OpenWeatherMap."
+      "description": "O aplicație pentru prognoza meteo, folosind OpenWeatherMap API."
+    },
+    "product-dashboard": {
+      "title": "Tablou de Bord pentru Produse",
+      "description": "Un tablou de bord pentru gestionarea produselor cu autentificare. Folosind RESTful API și Axios pentru a prelua datele."
     },
     "check_github": "Vezi Github-ul meu"
   },
@@ -64,7 +68,7 @@
       "email": "Email",
       "phone": "Telefon",
       "location": "Locație",
-      "location_value": "Republica Moldova (deschis la lucru remote)"
+      "location_value": "Republica Moldova"
     },
     "connect": "Rețele de socializare",
     "send_message": {

@@ -48,11 +48,15 @@
     "placeholder_text": "Here are some of the projects I’ve created.",
     "burger_craft": {
       "title": "Burger Craft",
-      "description": "A web application for building and ordering custom burgers using React and Tailwind."
+      "description": "A web application for building and ordering custom burgers. Using zustand for state management."
     },
     "weather_app": {
       "title": "Weather app",
-      "description": "A weather forecasting app using React, Tailwind, and OpenWeatherMap API."
+      "description": "A weather forecasting app using OpenWeatherMap API."
+    },
+    "product-dashboard": {
+      "title": "Product Dashboard",
+      "description": "A product management dashboard with authentication. Using RESTful API and Axios to fetch data."
     },
     "check_github": "Check My Github"
   },
@@ -64,7 +68,7 @@
       "email": "Email",
       "phone": "Phone",
       "location": "Location",
-      "location_value": "Republic of Moldova (open to remote work)"
+      "location_value": "Republic of Moldova"
     },
     "connect": "Connect With Me",
     "send_message": {
