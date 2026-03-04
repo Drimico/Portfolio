@@ -1,4 +1,4 @@
-import { ArrowRight, ExternalLink, Github } from "lucide-react";
+import { ExternalLink, Github } from "lucide-react";
 import { useTranslation } from "react-i18next";
 
 const projects = [
@@ -35,36 +35,32 @@ export const ProjectsSection = () => {
   const { t } = useTranslation();
 
   return (
-    <section id="projects" className="py-24 px-4 relative">
-      <div className="container mx-auto max-w-5xl">
-        <h2 className="text-3xl md:text-4xl font-bold  text-center">{t("projects.title")}</h2>
-        <p className="text-center text-muted-foreground mb-12 max-w-2xl mx-auto">{t("projects.placeholder_text")}</p>
+    <section id="projects" className="relative min-h-screen flex flex-col justify-center items-center">
+      <div className=" flex flex-col gap-5">
+        <h2 className="text-3xl 768:text-4xl font-bold text-center">{t("projects.title")}</h2>
+        <p className="text-center text-muted-foreground w-full">{t("projects.placeholder_text")}</p>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <div className="flex flex-col 950:flex-row w-full justify-center items-center gap-5">
           {projects.map((project, key) => (
-            <div key={key} className="group bg-card rounded-lg overflow-hidden shadow-xs card-hover flex flex-col justify-between h-100 w-80">
-              <div className="h-full overflow-hidden ">
-                <img
-                  src={project.image}
-                  alt={t(project.titleKey)}
-                  className="w-full h-48 object-cover transition-transform duration-500 group-hover:scale-110"
-                />
+            <div key={key} className="bg-card rounded-lg shadow-xs 400:max-w-80 w-full min-h-[420px] flex flex-col">
+              <div className="w-full h-48 flex-shrink-0">
+                <img src={project.image} alt={t(project.titleKey)} className="object-cover h-full w-full" />
               </div>
 
-              <div className="px-4 py-2 h-full flex flex-col justify-between">
-                <div className="flex flex-wrap gap-2 ">
+              <div className="flex flex-col justify-between flex-grow p-4">
+                <div className="flex mb-3">
                   {project.tags.map((tag, i) => (
                     <span key={i} className="px-2 py-1 border text-xs font-medium rounded-full bg-secondary text-secondary-foreground">
                       {tag}
                     </span>
                   ))}
                 </div>
-                <div className="flex flex-col h-1/2">
+                <div className="flex flex-col flex-grow">
                   <h3 className="text-xl font-semibold ">{t(project.titleKey)}</h3>
                   <p className="text-muted-foreground text-sm ">{t(project.descriptionKey)}</p>
                 </div>
-                <div className="flex justify-between items-center">
-                  <div className="flex space-x-3">
+                <div className="flex justify-between items-center mt-4">
+                  <div className="flex gap-3">
                     <a href={project.demoUrl} target="_blank" className="text-foreground/80 hover:text-primary transition-colors duration-300">
                       <ExternalLink size={20} />
                     </a>
@@ -76,11 +72,6 @@ export const ProjectsSection = () => {
               </div>
             </div>
           ))}
-        </div>
-        <div className="text-center mt-12">
-          <a className="cosmic-button w-fit flex items-center mx-auto gap-2" target="_blank" href="https://github.com/Drimico">
-            {t("projects.check_github")} <ArrowRight size={16} />
-          </a>
         </div>
       </div>
     </section>
