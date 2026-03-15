@@ -52,7 +52,7 @@
     },
     "weather_app": {
       "title": "Weather app",
-      "description": "A weather forecasting app using OpenWeatherMap API."
+      "description": "A weather forecasting app with an interactive map. Using OpenWeatherMap API."
     },
     "product-dashboard": {
       "title": "Product Dashboard",
