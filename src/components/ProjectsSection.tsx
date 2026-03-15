@@ -8,7 +8,7 @@ const projects = [
     descriptionKey: "projects.burger_craft.description",
     image: "/projects/project1.png",
     tags: ["State Management"],
-    demoUrl: "https://68a4648117cd57000895462b--burger-craft-by-me.netlify.app/",
+    demoUrl: "https://69a17d80e7d1b00008a7887d--burgercraftbyme.netlify.app/",
     githubUrl: "https://github.com/Drimico/burger-craft",
   },
   {
@@ -17,7 +17,7 @@ const projects = [
     descriptionKey: "projects.weather_app.description",
     image: "/projects/project2.png",
     tags: ["API"],
-    demoUrl: "https://68c445f2e04082d20e336047--drimico-weather-app.netlify.app/",
+    demoUrl: "https://69b6732165e26f00080b8a80--drimico-weather-app.netlify.app/",
     githubUrl: "https://github.com/Drimico/Weather-app",
   },
   {
