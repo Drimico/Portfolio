@@ -52,7 +52,7 @@
     },
     "weather_app": {
       "title": "Aplicație Meteo",
-      "description": "O aplicație pentru prognoza meteo, folosind OpenWeatherMap API."
+      "description": "O aplicație pentru prognoza meteo cu hartă interactivă. Folosind OpenWeatherMap API."
     },
     "product-dashboard": {
       "title": "Tablou de Bord pentru Produse",

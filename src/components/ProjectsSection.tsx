@@ -17,7 +17,7 @@ const projects = [
     descriptionKey: "projects.weather_app.description",
     image: "/projects/project2.png",
     tags: ["API"],
-    demoUrl: "https://68c445f2e04082d20e336047--drimico-weather-app.netlify.app/",
+    demoUrl: "https://69b6732165e26f00080b8a80--drimico-weather-app.netlify.app/",
     githubUrl: "https://github.com/Drimico/Weather-app",
   },
   {
