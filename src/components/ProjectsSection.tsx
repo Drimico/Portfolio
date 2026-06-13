@@ -8,7 +8,7 @@ const projects = [
     descriptionKey: "projects.burger_craft.description",
     image: "/projects/project1.png",
     tags: ["State Management"],
-    demoUrl: "https://68a4648117cd57000895462b--burger-craft-by-me.netlify.app/",
+    demoUrl: "https://69a17d80e7d1b00008a7887d--burgercraftbyme.netlify.app/",
     githubUrl: "https://github.com/Drimico/burger-craft",
   },
   {
