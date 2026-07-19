@@ -58,6 +58,10 @@
       "title": "Tablou de Bord pentru Produse",
       "description": "Un tablou de bord pentru gestionarea produselor cu autentificare. Folosind RESTful API și Axios pentru a prelua datele."
     },
+    "coll-doc-editor": {
+      "title": "Col Docs Editor",
+      "description": "Un editor colaborativ în stilul Google Docs, cu editare în timp real pentru mai mulți utilizatori și cursoare live. Folosind Yjs CRDT prin WebSockets și Supabase."
+    },
     "check_github": "Vezi Github-ul meu"
   },
   "contact": {

@@ -1,4 +1,5 @@
-import { ExternalLink, Github } from "lucide-react";
+import { ExternalLink, Github, X } from "lucide-react";
+import { useEffect, useState } from "react";
 import { useTranslation } from "react-i18next";
 
 const projects = [
@@ -6,7 +7,8 @@ const projects = [
     id: 1,
     titleKey: "projects.burger_craft.title",
     descriptionKey: "projects.burger_craft.description",
-    image: "/projects/project1.png",
+    image: "/projects/project1.jpg",
+    fullImage: "/projects/project1-full.jpg",
     tags: ["State Management"],
     demoUrl: "https://69a17d80e7d1b00008a7887d--burgercraftbyme.netlify.app/",
     githubUrl: "https://github.com/Drimico/burger-craft",
@@ -16,6 +18,7 @@ const projects = [
     titleKey: "projects.weather_app.title",
     descriptionKey: "projects.weather_app.description",
     image: "/projects/project2.png",
+    fullImage: "/projects/project2-full.jpg",
     tags: ["API"],
     demoUrl: "https://69b6732165e26f00080b8a80--drimico-weather-app.netlify.app/",
     githubUrl: "https://github.com/Drimico/Weather-app",
@@ -25,6 +28,7 @@ const projects = [
     titleKey: "projects.product-dashboard.title",
     descriptionKey: "projects.product-dashboard.description",
     image: "/projects/project3.png",
+    fullImage: "/projects/project3-full.png",
     tags: ["RESTful API"],
     demoUrl: "https://product-dashboard-nine-weld.vercel.app/",
     githubUrl: "https://github.com/Drimico/product-dashboard",
@@ -34,6 +38,7 @@ const projects = [
     titleKey: "projects.coll-doc-editor.title",
     descriptionKey: "projects.coll-doc-editor.description",
     image: "/projects/project4.png",
+    fullImage: "/projects/project4-full.png",
     tags: ["Websockets"],
     demoUrl: "https://6a5cd2d8af59a00008de9125--coll-docs-editor.netlify.app/",
     githubUrl: "https://github.com/Drimico/collaborative-document-editor",
@@ -42,6 +47,20 @@ const projects = [
 
 export const ProjectsSection = () => {
   const { t } = useTranslation();
+  const [selectedProject, setSelectedProject] = useState<(typeof projects)[number] | null>(null);
+
+  useEffect(() => {
+    if (!selectedProject) return;
+    const onKeyDown = (e: KeyboardEvent) => {
+      if (e.key === "Escape") setSelectedProject(null);
+    };
+    window.addEventListener("keydown", onKeyDown);
+    document.body.style.overflow = "hidden";
+    return () => {
+      window.removeEventListener("keydown", onKeyDown);
+      document.body.style.overflow = "";
+    };
+  }, [selectedProject]);
 
   return (
     <section
@@ -58,11 +77,12 @@ export const ProjectsSection = () => {
               key={key}
               className="bg-card rounded-lg shadow-xs 400:max-w-80 w-full min-h-[420px] flex flex-col"
             >
-              <div className="w-full h-48 flex-shrink-0">
+              <div className="w-full h-48 flex-shrink-0 overflow-hidden rounded-t-lg">
                 <img
                   src={project.image}
                   alt={t(project.titleKey)}
-                  className="object-cover h-full w-full"
+                  onClick={() => setSelectedProject(project)}
+                  className="object-cover h-full w-full cursor-pointer transition-transform duration-300 hover:scale-105"
                 />
               </div>
 
@@ -104,6 +124,28 @@ export const ProjectsSection = () => {
           ))}
         </div>
       </div>
+
+      {selectedProject && (
+        <div
+          className="fixed inset-0 z-50 flex items-center justify-center bg-black/60 backdrop-blur-sm p-4"
+          onClick={() => setSelectedProject(null)}
+        >
+          <div className="relative" onClick={(e) => e.stopPropagation()}>
+            <img
+              src={selectedProject.fullImage}
+              alt={t(selectedProject.titleKey)}
+              className="max-w-[90vw] max-h-[85vh] rounded-lg shadow-2xl"
+            />
+            <button
+              onClick={() => setSelectedProject(null)}
+              aria-label="Close"
+              className="absolute -top-4 -right-4 p-2 rounded-full bg-card text-foreground shadow-lg cursor-pointer hover:text-primary transition-colors duration-300"
+            >
+              <X size={20} />
+            </button>
+          </div>
+        </div>
+      )}
     </section>
   );
 };

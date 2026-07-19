@@ -58,6 +58,10 @@
       "title": "Product Dashboard",
       "description": "A product management dashboard with authentication. Using RESTful API and Axios to fetch data."
     },
+    "coll-doc-editor": {
+      "title": "Col Docs Editor",
+      "description": "A Google Docs–style collaborative editor with real-time multi-user editing and live cursors. Using Yjs CRDTs over WebSockets and Supabase."
+    },
     "check_github": "Check My Github"
   },
   "contact": {
