@@ -29,28 +29,50 @@ const projects = [
     demoUrl: "https://product-dashboard-nine-weld.vercel.app/",
     githubUrl: "https://github.com/Drimico/product-dashboard",
   },
+  {
+    id: 4,
+    titleKey: "projects.coll-doc-editor.title",
+    descriptionKey: "projects.coll-doc-editor.description",
+    image: "/projects/project4.png",
+    tags: ["Websockets"],
+    demoUrl: "https://6a5cd2d8af59a00008de9125--coll-docs-editor.netlify.app/",
+    githubUrl: "https://github.com/Drimico/collaborative-document-editor",
+  },
 ];
 
 export const ProjectsSection = () => {
   const { t } = useTranslation();
 
   return (
-    <section id="projects" className="relative min-h-screen flex flex-col justify-center items-center">
+    <section
+      id="projects"
+      className="relative min-h-screen flex flex-col justify-center items-center"
+    >
       <div className=" flex flex-col gap-5">
         <h2 className="text-3xl 768:text-4xl font-bold text-center">{t("projects.title")}</h2>
         <p className="text-center text-muted-foreground w-full">{t("projects.placeholder_text")}</p>
 
         <div className="flex flex-col 950:flex-row w-full justify-center items-center gap-5">
           {projects.map((project, key) => (
-            <div key={key} className="bg-card rounded-lg shadow-xs 400:max-w-80 w-full min-h-[420px] flex flex-col">
+            <div
+              key={key}
+              className="bg-card rounded-lg shadow-xs 400:max-w-80 w-full min-h-[420px] flex flex-col"
+            >
               <div className="w-full h-48 flex-shrink-0">
-                <img src={project.image} alt={t(project.titleKey)} className="object-cover h-full w-full" />
+                <img
+                  src={project.image}
+                  alt={t(project.titleKey)}
+                  className="object-cover h-full w-full"
+                />
               </div>
 
               <div className="flex flex-col justify-between flex-grow p-4">
                 <div className="flex mb-3">
                   {project.tags.map((tag, i) => (
-                    <span key={i} className="px-2 py-1 border text-xs font-medium rounded-full bg-secondary text-secondary-foreground">
+                    <span
+                      key={i}
+                      className="px-2 py-1 border text-xs font-medium rounded-full bg-secondary text-secondary-foreground"
+                    >
                       {tag}
                     </span>
                   ))}
@@ -61,10 +83,18 @@ export const ProjectsSection = () => {
                 </div>
                 <div className="flex justify-between items-center mt-4">
                   <div className="flex gap-3">
-                    <a href={project.demoUrl} target="_blank" className="text-foreground/80 hover:text-primary transition-colors duration-300">
+                    <a
+                      href={project.demoUrl}
+                      target="_blank"
+                      className="text-foreground/80 hover:text-primary transition-colors duration-300"
+                    >
                       <ExternalLink size={20} />
                     </a>
-                    <a href={project.githubUrl} target="_blank" className="text-foreground/80 hover:text-primary transition-colors duration-300">
+                    <a
+                      href={project.githubUrl}
+                      target="_blank"
+                      className="text-foreground/80 hover:text-primary transition-colors duration-300"
+                    >
                       <Github size={20} />
                     </a>
                   </div>
